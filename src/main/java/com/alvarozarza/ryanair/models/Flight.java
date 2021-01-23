@@ -1,23 +1,18 @@
 package com.alvarozarza.ryanair.models;
 
 
+import java.time.LocalTime;
+
 public class Flight {
 
     private String carrierCode;
     private String number;
-    private String departureTime;
-    private String arrivalTime;
+    private LocalTime departureTime;
+    private LocalTime arrivalTime;
 
     public Flight() {
-    }
 
-    public Flight(String carrierCode, String number, String departureTime, String arrivalTime) {
-        this.carrierCode = carrierCode;
-        this.number = number;
-        this.departureTime = departureTime;
-        this.arrivalTime = arrivalTime;
     }
-
 
     public String getCarrierCode() {
         return carrierCode;
@@ -35,19 +30,19 @@ public class Flight {
         this.number = number;
     }
 
-    public String getDepartureTime() {
+    public LocalTime getDepartureTime() {
         return departureTime;
     }
 
-    public void setDepartureTime(String departureTime) {
+    public void setDepartureTime(LocalTime departureTime) {
         this.departureTime = departureTime;
     }
 
-    public String getArrivalTime() {
+    public LocalTime getArrivalTime() {
         return arrivalTime;
     }
 
-    public void setArrivalTime(String arrivalTime) {
+    public void setArrivalTime(LocalTime arrivalTime) {
         this.arrivalTime = arrivalTime;
     }
 }

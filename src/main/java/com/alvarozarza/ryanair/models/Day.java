@@ -10,11 +10,6 @@ public class Day {
     public Day() {
     }
 
-    public Day(Integer day, List<Flight> flights) {
-        this.day = day;
-        this.flights = flights;
-    }
-
     public Integer getDay() {
         return day;
     }

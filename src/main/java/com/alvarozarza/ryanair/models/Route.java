@@ -13,16 +13,6 @@ public class Route {
     public Route() {
     }
 
-    public Route(String airportFrom, String airportTo, String connectingAirport, Boolean newRoute, Boolean seasonalRoute, String operator, String group) {
-        this.airportFrom = airportFrom;
-        this.airportTo = airportTo;
-        this.connectingAirport = connectingAirport;
-        this.newRoute = newRoute;
-        this.seasonalRoute = seasonalRoute;
-        this.operator = operator;
-        this.group = group;
-    }
-
 
     public String getAirportFrom() {
         return airportFrom;

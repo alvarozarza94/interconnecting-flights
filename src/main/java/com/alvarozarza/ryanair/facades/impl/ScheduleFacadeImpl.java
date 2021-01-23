@@ -22,11 +22,11 @@ public class ScheduleFacadeImpl implements ScheduleFacade {
     @Override
     public Schedule getSchedules(String departure, String arrival, Integer year, Integer month) {
 
-        HTTPS_API_RYANAIR_SCHEDULES = HTTPS_API_RYANAIR_SCHEDULES.replace("{departure}", departure)
+        String uri = HTTPS_API_RYANAIR_SCHEDULES.replace("{departure}", departure)
                 .replace("{arrival}", arrival).replace("{year}", year.toString())
                 .replace("{month}", month.toString());
 
-        ResponseEntity<Schedule> response = restTemplate.exchange(HTTPS_API_RYANAIR_SCHEDULES,
+        ResponseEntity<Schedule> response = restTemplate.exchange(uri,
                 HttpMethod.GET, null, new ParameterizedTypeReference<>() {
                 });
 

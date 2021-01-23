@@ -8,14 +8,9 @@ public class Schedule {
     private Integer month;
     private List<Day> days;
 
-    public Schedule(Integer month, List<Day> days) {
-        this.month = month;
-        this.days = days;
+    public Schedule() {
     }
 
-    public Schedule(List<Day> days) {
-        this.days = days;
-    }
 
     public Integer getMonth() {
         return month;
