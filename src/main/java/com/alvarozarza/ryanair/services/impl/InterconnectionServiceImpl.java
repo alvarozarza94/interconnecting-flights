@@ -84,7 +84,7 @@ public class InterconnectionServiceImpl implements InterconnectionService {
 
         //Loop over all the months and get all the schedules and direct flights
         List<InterconnectionFlight> directFlights = new ArrayList<>();
-        for (int i = departureDateTime.getMonthValue(), monthNumber = departureDateTime.getMonthValue(), year = departureDateTime.getYear(); i <= monthsBetween; i++, monthNumber++) {
+        for (int i = 0, monthNumber = departureDateTime.getMonthValue(), year = departureDateTime.getYear(); i < monthsBetween; i++, monthNumber++) {
             Schedule schedule = scheduleFacade.getSchedules(route.getAirportFrom(), route.getAirportTo(), year, monthNumber);
             directFlights.addAll(getFlightsBySchedule(schedule, route.getAirportFrom(), route.getAirportTo(), departureDateTime, arrivalDateTime));
             if (monthNumber == 12) {
